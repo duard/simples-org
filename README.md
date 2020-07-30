@@ -5,9 +5,10 @@ Atualizar o projeto inteiro, sempre mantenha ele atualizado, não seja um goiaba
 https://awesomeopensource.com/project/juliandavidmr/awesome-nestjs
 
 ```shell
-npm uninstall -g angular-cli
-npm install -g @angular/cli@latest
-npx ng update --all --force
+npm uninstall -g angular-cli;
+npm install -g @angular/cli@latest;
+npx ng update --all --force;
+npm audit fix; npm audit fix --force;
 ```
 
 Gerar todas as Entities do seu banco de dados
@@ -22,7 +23,7 @@ Criar uma nova Library NestJS
 nx generate @nrwl/nest:library lib-nome-a-ser-creiada
 ```
 
-# installs angular
+##### installs angular
 
 ```
 npm i @ngrx/store-devtools @ngrx/store @ngrx/effects @ngrx/store-devtools @ngrx/schematics  @angular/animations @angular/cdk @angular/cdk @angular/flex-layout @angular/material  @angular/material-moment-adapter @ngx-translate/core  @ngrx/router-store --save
@@ -31,7 +32,7 @@ npm audit fix; npm audit fix --force;
 
 ```
 
-# installs nestjs
+#### installs nestjs
 
 ```
 npm i --save typeorm @nestjs/config @nestjs/typeorm @nestjs/common dotenv-flow mysql
@@ -41,7 +42,7 @@ npm audit fix; npm audit fix --force;
 
 ```
 
-# configure o cypress para rodar no WSL2 :-)
+## configure o cypress para rodar no WSL2 :-)
 https://nickymeuleman.netlify.app/blog/gui-on-wsl2-cypress
 
 ```
