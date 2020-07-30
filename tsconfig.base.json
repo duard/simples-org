@@ -16,7 +16,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@simples-org/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@env/*": ["environments/*"],
+      "@simples-org/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@simples-org/lib-app-core": ["libs/lib-app-core/src/index.ts"],
+      "@simples-org/lib-api-core": ["libs/lib-api-core/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

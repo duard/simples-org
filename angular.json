@@ -29,8 +29,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/front/src/environments/environment.ts",
-                  "with": "apps/front/src/environments/environment.prod.ts"
+                  "replace": "environments/environment.ts",
+                  "with": "environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -148,6 +148,22 @@
                   "with": "apps/api/src/environments/environment.prod.ts"
                 }
               ]
+            },
+            "qa": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/api/src/environments/environment.ts",
+                  "with": "apps/api/src/environments/environment.qa.ts"
+                }
+              ]
+            },
+            "staging": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.staging.ts"
+                }
+              ]
             }
           }
         },
@@ -155,7 +171,15 @@
           "builder": "@nrwl/node:execute",
           "options": {
             "buildTarget": "api:build"
-          }
+          },
+          "configurations": {
+            "dev": {
+                "buildTarget": "api:build:dev"
+            },
+            "qa": {
+                "buildTarget": "api:build:qa"
+            }
+        }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -198,6 +222,64 @@
           "options": {
             "jestConfig": "libs/api-interfaces/jest.config.js",
             "tsConfig": "libs/api-interfaces/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "lib-app-core": {
+      "projectType": "library",
+      "root": "libs/lib-app-core",
+      "sourceRoot": "libs/lib-app-core/src",
+      "prefix": "simples-org",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/lib-app-core/tsconfig.lib.json",
+              "libs/lib-app-core/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/lib-app-core/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/lib-app-core/jest.config.js",
+            "tsConfig": "libs/lib-app-core/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/lib-app-core/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "lib-api-core": {
+      "root": "libs/lib-api-core",
+      "sourceRoot": "libs/lib-api-core/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/lib-api-core/tsconfig.lib.json",
+              "libs/lib-api-core/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/lib-api-core/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/lib-api-core/jest.config.js",
+            "tsConfig": "libs/lib-api-core/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }

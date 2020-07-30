@@ -1,6 +1,6 @@
 export const environment = {
-  production: true,
-  environment: 'production',
+  production: false,
+  environment: 'stagin',
   TIMEZONE: 'America/Sao_Paulo',
 
   API_BASE_TYPEORM_TYPE: process.env.API_BASE_TYPEORM_TYPE,
