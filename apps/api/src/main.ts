@@ -26,6 +26,7 @@ async function bootstrap() {
       `AMBIENTE => ${environment.environment}`
     );
     console.log('😃');
+    Logger.debug(`server running on port ${port}`);
   });
 }
 
