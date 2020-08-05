@@ -8,6 +8,7 @@
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "nx": "nx",
     "start:goiaba": "TS_NODE_TRANSPILE_ONLY=true nodemon -e ts --exec \"ts-node -r dotenv/config  -r ./index.ts\"",
+    "dev": "npx nx run-many --target=serve --configuration=development --projects=front,api --parallel=true --maxParallel=100",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",

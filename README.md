@@ -9,7 +9,7 @@ npx ng update --all --force;
 npm audit fix; npm audit fix --force;
 ```
 
-rodar a API e o APP paralelamente :-D 
+rodar a API e o APP paralelamente :-D  ```npm run dev```
 
 ```shell
 npx nx run-many --target=serve --projects=front,api --parallel=true 
