@@ -174,12 +174,12 @@
           },
           "configurations": {
             "dev": {
-                "buildTarget": "api:build:dev"
+              "buildTarget": "api:build:dev"
             },
             "qa": {
-                "buildTarget": "api:build:qa"
+              "buildTarget": "api:build:qa"
             }
-        }
+          }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -280,6 +280,32 @@
           "options": {
             "jestConfig": "libs/lib-api-core/jest.config.js",
             "tsConfig": "libs/lib-api-core/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "lib-api-shared": {
+      "root": "libs/lib-api-shared",
+      "sourceRoot": "libs/lib-api-shared/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/lib-api-shared/tsconfig.lib.json",
+              "libs/lib-api-shared/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/lib-api-shared/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/lib-api-shared/jest.config.js",
+            "tsConfig": "libs/lib-api-shared/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }

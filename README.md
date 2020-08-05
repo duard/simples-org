@@ -36,19 +36,19 @@ npm audit fix; npm audit fix --force;
 
 ```
 npm i --save typeorm @nestjs/config @nestjs/typeorm @nestjs/common dotenv-flow mysql
-npm i --save-dev   
-
+npm i --save-dev    @types/lodash
+npm i --save @nestjs/jwt request-context bcrypt @nestjs/swagger class-transformer class-validator @nestjs/passport nestjs-i18n compression  express-rate-limit file-type helmet jsonwebtoken lodash mime-types morgan reflect-metadata request-context source-map-support passport-jwt  @nestjs/microservices passport
 npm audit fix; npm audit fix --force;
 
-```
-
-## configure o cypress para rodar no WSL2 :-)
-https://nickymeuleman.netlify.app/blog/gui-on-wsl2-cypress
-
-```
-npm uninstall cypress --save-dev; npm install cypress --save-dev;
 ```
 
 ## configurar o cache
 Connect the workspace to your Nx Cloud account at https://nx.app/orgs/workspace-setup?accessToken=ZjFjYzI4OWMtNzY1Ny00MjYyLWI3YmItMmRkMjhkZmNlZDdkfHJlYWQtd3JpdGU=.
 This will allow you to configure the cache and see detailed stats. You can do it later.
+
+## cypress ainda não funfa no WSL2 :-o
+https://nickymeuleman.netlify.app/blog/gui-on-wsl2-cypress
+
+```
+npm uninstall cypress --save-dev; npm install cypress --save-dev;
+```
