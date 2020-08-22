@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Message } from '@simples-org/api-interfaces';
+import { environment } from '@env/environment';
 
 @Component({
   selector: 'simples-org-root',
@@ -9,5 +10,7 @@ import { Message } from '@simples-org/api-interfaces';
 })
 export class AppComponent {
   hello$ = this.http.get<Message>('/api/hello');
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    console.log('=> production', environment.production)
+  }
 }

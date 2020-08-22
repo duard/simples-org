@@ -5,10 +5,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
-
 import { LibApiCoreModule, DatabaseConfig } from "@simples-org/lib-api-core";
 import { dbConfig } from './configs/db-config';
 
+import { TestesModule } from "@simples-org/lib-api-cruds";
 
 @Module({
   imports: [
@@ -21,6 +21,8 @@ import { dbConfig } from './configs/db-config';
       imports: [ConfigModule],
       useClass: DatabaseConfig,
     }),
+
+    TestesModule,
     LibApiCoreModule
  ],  
   controllers: [AppController],

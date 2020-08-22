@@ -11,7 +11,7 @@ export const environment = {
   API_BASE_TYPEORM_PORT: process.env.API_BASE_TYPEORM_PORT,
   API_BASE_TYPEORM_SYNCHRONIZE: true,
 
-  API_PORT: 3000,
+  API_PORT: 3333,
   API_HOST: 'localhost',
   JWT_SECRET: 'secredinhos 3D',
 };
