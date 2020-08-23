@@ -43,6 +43,12 @@
     },
     "lib-api-core": {
       "tags": []
+    },
+    "lib-api-cruds": {
+      "tags": []
+    },
+    "lib-api-shared": {
+      "tags": []
     }
   }
 }
