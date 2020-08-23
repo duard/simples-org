@@ -17,21 +17,17 @@ async function bootstrap() {
   app.setGlobalPrefix(globalPrefix);
   const port = environment.API_PORT || 3333;
   await app.listen(port, () => {
+
+    Logger.debug(`Running in ${config.get('environment')} mode`);
     if (!environment.production) {
       Logger.debug(environment.API_BASE_TYPEORM_HOST, 'HOSTNAME');
       Logger.debug(environment.API_BASE_TYPEORM_USERNAME, 'USERNAME');
       Logger.debug(environment.API_BASE_TYPEORM_PASSWORD, 'PASSWORD');
       Logger.debug(environment.API_BASE_TYPEORM_DATABASE, 'DATABASE');
     }
-    Logger.debug(
-      'Listening at http://localhost:' + port || 3000 + '/' + globalPrefix,
-
-      `AMBIENTE => ${environment.environment}`
-    );
+    Logger.debug('Listening at http://localhost:' + port + '/' + globalPrefix);
     console.log('😃');
     // Logger.debug(`server running on port ${port} ${environment.API_PORT}`);
-    Logger.log('Listening at http://localhost:' + port + '/' + globalPrefix);
-    Logger.log(`Running in ${config.get('environment')} mode`);
   });
 }
 

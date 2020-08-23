@@ -1,8 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { GraphQLModule } from '@nestjs/graphql';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { configuration } from './config/configuration';
+import { DatabaseConfig } from './config/database.config';
 import { validationSchema } from './config/validation';
 import { CoreResolver } from './core.resolver';
 
@@ -13,6 +15,12 @@ import { CoreResolver } from './core.resolver';
       load: [configuration],
       validationSchema,
     }),
+
+    TypeOrmModule.forRootAsync({
+      imports: [ConfigModule],
+      useClass: DatabaseConfig,
+    }),
+
     GraphQLModule.forRoot({
       autoSchemaFile: true,
       playground: true,

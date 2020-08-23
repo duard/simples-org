@@ -46,6 +46,9 @@
     },
     "lib-api-cruds": {
       "tags": []
+    },
+    "lib-api-shared": {
+      "tags": []
     }
   }
 }

@@ -9,6 +9,7 @@ export class DatabaseConfig implements TypeOrmOptionsFactory {
   createTypeOrmOptions() {
     const dbConfig = this.configService.get('database');
     console.log('\n\n\n');
+    console.log('=>', dbConfig);
     console.log('💡');
 
     return this.configService.get('database');

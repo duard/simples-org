@@ -20,7 +20,8 @@
       "@simples-org/api-interfaces": ["libs/api-interfaces/src/index.ts"],
       "@simples-org/lib-app-core": ["libs/lib-app-core/src/index.ts"],
       "@simples-org/lib-api-core": ["libs/lib-api-core/src/index.ts"],
-      "@simples-org/lib-api-cruds": ["libs/lib-api-cruds/src/index.ts"]
+      "@simples-org/lib-api-cruds": ["libs/lib-api-cruds/src/index.ts"],
+      "@simples-org/lib-api-shared": ["libs/lib-api-shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

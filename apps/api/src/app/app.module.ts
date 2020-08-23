@@ -1,30 +1,13 @@
 import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
-import { TypeOrmModule } from '@nestjs/typeorm';
+import { LibApiCoreModule } from '@simples-org/lib-api-core';
+import { CargosModule, TestesModule } from '@simples-org/lib-api-cruds';
+import { LibApiSharedModule } from '@simples-org/lib-api-shared';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
-import { LibApiCoreModule, DatabaseConfig } from "@simples-org/lib-api-core";
-import { dbConfig } from './configs/db-config';
-
-import { TestesModule } from "@simples-org/lib-api-cruds";
-
 @Module({
-  imports: [
-    ConfigModule.forRoot({
-      isGlobal: true,
-      load: [dbConfig],
-    }),
- 
-    TypeOrmModule.forRootAsync({
-      imports: [ConfigModule],
-      useClass: DatabaseConfig,
-    }),
-
-    TestesModule,
-    LibApiCoreModule
- ],  
+  imports: [LibApiCoreModule, LibApiSharedModule, CargosModule, TestesModule],
   controllers: [AppController],
   providers: [AppService],
 })

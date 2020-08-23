@@ -1,12 +1,12 @@
 import { Controller, Get } from '@nestjs/common';
 import { Crud, CrudController } from '@nestjsx/crud';
-import { TesteEntity } from '@simples-org/api-interfaces';
+import { CargoEntity } from '@simples-org/api-interfaces';
 
-import { TestesService } from './testes.service';
+import { CargosService } from './cargos.service';
 
 @Crud({
   model: {
-    type: TesteEntity,
+    type: CargoEntity,
   },
   query: {
     limit: 5,
@@ -20,9 +20,9 @@ import { TestesService } from './testes.service';
     },
   },
 })
-@Controller('testes')
-export class TestesController implements CrudController<TesteEntity> {
-  constructor(public service: TestesService) {}
+@Controller('cargos')
+export class CargosController implements CrudController<CargoEntity> {
+  constructor(public service: CargosService) {}
 
   @Get('hello')
   getData(): any {

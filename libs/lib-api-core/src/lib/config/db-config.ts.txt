@@ -1,6 +1,6 @@
 import { getMetadataArgsStorage } from 'typeorm';
 
-import { environment } from '../../environments/environment';
+import { environment } from '@env/environment';
 
 export const dbConfig = () => ({
   port: Number(environment.API_PORT),
@@ -20,7 +20,7 @@ export const dbConfig = () => ({
     //   join(__dirname, './**/*.entity{.ts,.js}'),
     //   '../../../../../libs/lib-api-cruds/src/lib/*.entity{.ts,.js}',
     // ],
-    logging: true,
+    // logging: 'all',
     autoLoadEntities: true,
     // entities: getMetadataArgsStorage().tables.map(tbl => tbl.target),
   },

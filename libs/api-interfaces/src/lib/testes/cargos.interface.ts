@@ -1,5 +1,5 @@
-export interface Escolaridade {
-  IDE002: number;
+export interface Cargo {
+  IDE001: number;
   NOME: string;
   CREATED: Date;
   UPDATED: Date;
