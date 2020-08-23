@@ -1,10 +1,11 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { TesteEntity } from '@simples-org/api-interfaces';
+
 import { LibApiCoreModule } from '@simples-org/lib-api-core';
 
 import { TestesController } from './testes.controller';
 import { TestesService } from './testes.service';
+import { TesteEntity } from './teste.entity';
 
 describe('TestesController', () => {
   let app: TestingModule;

@@ -1,7 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 import { Crud, CrudController } from '@nestjsx/crud';
-import { TesteEntity } from '@simples-org/api-interfaces';
 
+import { TesteEntity } from './teste.entity';
 import { TestesService } from './testes.service';
 
 @Crud({

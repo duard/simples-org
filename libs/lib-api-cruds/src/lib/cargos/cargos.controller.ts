@@ -1,8 +1,8 @@
 import { Controller, Get } from '@nestjs/common';
 import { Crud, CrudController } from '@nestjsx/crud';
-import { CargoEntity } from '@simples-org/api-interfaces';
 
 import { CargosService } from './cargos.service';
+import { CargoEntity } from './cargos.entity';
 
 @Crud({
   model: {

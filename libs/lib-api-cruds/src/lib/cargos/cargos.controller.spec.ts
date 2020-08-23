@@ -1,9 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { CargoEntity } from '@simples-org/api-interfaces';
 import { LibApiCoreModule } from '@simples-org/lib-api-core';
 
 import { CargosController } from './cargos.controller';
+import { CargoEntity } from './cargos.entity';
 import { CargosService } from './cargos.service';
 
 describe('CargosController', () => {

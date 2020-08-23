@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { TypeOrmCrudService } from '@nestjsx/crud-typeorm';
-import { CargoEntity } from '@simples-org/api-interfaces';
 import { Repository } from 'typeorm';
+
+import { CargoEntity } from './cargos.entity';
 
 @Injectable()
 export class CargosService extends TypeOrmCrudService<CargoEntity> {
@@ -12,5 +13,5 @@ export class CargosService extends TypeOrmCrudService<CargoEntity> {
 
   getData(): any {
     return { message: 'Welcome to api!' };
-  }    
+  }
 }
