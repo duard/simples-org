@@ -77,10 +77,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/front/tsconfig.app.json",
-              "apps/front/tsconfig.spec.json"
-            ],
+            "tsConfig": ["apps/front/tsconfig.app.json", "apps/front/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**", "!apps/front/**/*"]
           }
         },
@@ -174,20 +171,17 @@
           },
           "configurations": {
             "dev": {
-                "buildTarget": "api:build:dev"
+              "buildTarget": "api:build:dev"
             },
             "qa": {
-                "buildTarget": "api:build:qa"
+              "buildTarget": "api:build:qa"
             }
-        }
+          }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/api/tsconfig.app.json",
-              "apps/api/tsconfig.spec.json"
-            ],
+            "tsConfig": ["apps/api/tsconfig.app.json", "apps/api/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**", "!apps/api/**/*"]
           }
         },
@@ -210,10 +204,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "libs/api-interfaces/tsconfig.lib.json",
-              "libs/api-interfaces/tsconfig.spec.json"
-            ],
+            "tsConfig": ["libs/api-interfaces/tsconfig.lib.json", "libs/api-interfaces/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**", "!libs/api-interfaces/**/*"]
           }
         },
@@ -236,10 +227,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "libs/lib-app-core/tsconfig.lib.json",
-              "libs/lib-app-core/tsconfig.spec.json"
-            ],
+            "tsConfig": ["libs/lib-app-core/tsconfig.lib.json", "libs/lib-app-core/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**", "!libs/lib-app-core/**/*"]
           }
         },
@@ -268,10 +256,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "libs/lib-api-core/tsconfig.lib.json",
-              "libs/lib-api-core/tsconfig.spec.json"
-            ],
+            "tsConfig": ["libs/lib-api-core/tsconfig.lib.json", "libs/lib-api-core/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**", "!libs/lib-api-core/**/*"]
           }
         },
@@ -280,6 +265,52 @@
           "options": {
             "jestConfig": "libs/lib-api-core/jest.config.js",
             "tsConfig": "libs/lib-api-core/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "lib-api-cruds": {
+      "root": "libs/lib-api-cruds",
+      "sourceRoot": "libs/lib-api-cruds/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["libs/lib-api-cruds/tsconfig.lib.json", "libs/lib-api-cruds/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**", "!libs/lib-api-cruds/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/lib-api-cruds/jest.config.js",
+            "tsConfig": "libs/lib-api-cruds/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "lib-api-shared": {
+      "root": "libs/lib-api-shared",
+      "sourceRoot": "libs/lib-api-shared/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["libs/lib-api-shared/tsconfig.lib.json", "libs/lib-api-shared/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**", "!libs/lib-api-shared/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/lib-api-shared/jest.config.js",
+            "tsConfig": "libs/lib-api-shared/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }
