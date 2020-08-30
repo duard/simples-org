@@ -9,8 +9,12 @@ import { environment } from '@env/environment';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  isDev = !environment.production;
+
   hello$ = this.http.get<Message>('/api/hello');
   constructor(private http: HttpClient) {
-    console.log('=> production', environment.production)
+    if (this.isDev) {
+      console.log('=> development', this.isDev);
+    }
   }
 }
