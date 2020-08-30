@@ -3,6 +3,8 @@
 Atualizar o projeto inteiro, sempre mantenha ele atualizado, não seja um goiaba que deixa as coisas em 1998.
 
 ```shell
+rm -rf node_modules;
+npm install;
 npm uninstall -g angular-cli;
 npm install -g @angular/cli@latest;
 npx ng update --all --force;
