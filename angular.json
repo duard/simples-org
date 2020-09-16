@@ -346,6 +346,35 @@
           "style": "scss"
         }
       }
+    },
+    "lib-app-store": {
+      "projectType": "library",
+      "root": "libs/lib-app-store",
+      "sourceRoot": "libs/lib-app-store/src",
+      "prefix": "simples-org",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["libs/lib-app-store/tsconfig.lib.json", "libs/lib-app-store/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**", "!libs/lib-app-store/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/lib-app-store/jest.config.js",
+            "tsConfig": "libs/lib-app-store/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/lib-app-store/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

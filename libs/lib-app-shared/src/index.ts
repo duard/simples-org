@@ -1,7 +1,7 @@
-import { NavbarLeftComponent } from './lib/components/navbar-left/navbar-left.component';
-import { NavigationComponent } from './lib/components/navigation/navigation.component';
-import { SidebarComponent } from './lib/components/sidebar/sidebar.component';
 
 export * from './lib/lib-app-shared.module';
 
-export const NavigationComponents = [SidebarComponent, NavbarLeftComponent, NavigationComponent];
+export * from  './lib/components/sidebar/sidebar.component';
+export * from './lib/components/navbar-left/navbar-left.component';
+export * from './lib/components/navigation/navigation.component';
+

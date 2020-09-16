@@ -80,7 +80,9 @@
     "date-fns": "2.15.0",
     "ng-zorro-antd": "10.0.0-beta.2",
     "ngx-quill": "^12.0.1",
-    "quill": "^1.3.7"
+    "quill": "^1.3.7",
+    "@ngneat/content-loader": "^4.1.0",
+    "@ngneat/until-destroy": "^7.1.6"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1000.0",

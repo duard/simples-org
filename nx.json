@@ -52,6 +52,9 @@
     },
     "lib-app-shared": {
       "tags": []
+    },
+    "lib-app-store": {
+      "tags": []
     }
   }
 }

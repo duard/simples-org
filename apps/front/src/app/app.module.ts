@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { LibAppCoreModule } from '@simples-org/lib-app-core';
+import { LibAppStoreModule } from '@simples-org/lib-app-store';
+
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { QuillModule } from 'ngx-quill';
@@ -21,8 +23,9 @@ import { ProjectModule } from './project/project.module';
     NzSpinModule,
     NzIconModule.forRoot([]),
     QuillModule.forRoot(),
-    RouterModule.forRoot([{ path: '', component: AppComponent }]),
+    // RouterModule.forRoot([{ path: '', component: AppComponent }]),
     LibAppCoreModule,
+    LibAppStoreModule,
     ProjectModule,
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
