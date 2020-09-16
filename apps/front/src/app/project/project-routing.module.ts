@@ -1,30 +1,31 @@
-  
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ProjectConst } from './config/const';
+import { BoardComponent } from './pages/board/board.component';
+import { FullIssueDetailComponent } from './pages/full-issue-detail/full-issue-detail.component';
+import { SettingsComponent } from './pages/settings/settings.component';
 import { ProjectComponent } from './project.component';
-import { SetttingsComponent } from './pages/setttings/setttings.component';
-import { AboutComponent } from './pages/about/about.component'
 
 const routes: Routes = [
   {
-    path: '',
+    path: "",
     component: ProjectComponent,
     children: [
       {
-        path: 'about',
-        component: AboutComponent
+        path: 'board',
+        component: BoardComponent
       },
       {
         path: 'settings',
-        component: SetttingsComponent
+        component: SettingsComponent
       },
-      // {
-      //   path: `issue/:${ProjectConst.IssueId}`,
-      //   component: FullIssueDetailComponent
-      // },
+      {
+        path: `issue/:${ProjectConst.IssueId}`,
+        component: FullIssueDetailComponent
+      },
       {
         path: '',
-        redirectTo: 'about',
+        redirectTo: 'board',
         pathMatch: 'full'
       }
     ]

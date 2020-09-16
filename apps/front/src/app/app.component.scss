@@ -1,6 +1,4 @@
-  
-// @import '../core/styles/custom';
-@import '../app/core/styles/custom.scss';
+@import './core/styles/custom';
 
 #app-frame {
   position: absolute;
@@ -19,7 +17,7 @@
   }
 }
 
-app-project {
+app-project, app-login, app-signup {
   @apply flex;
   flex-grow: 1;
   flex-direction: column;
@@ -41,7 +39,7 @@ board-dnd {
 //ng-zorro override
 body,
 .ant-modal {
-  // @apply text-textDark;
+  @apply text-textDark;
 }
 
 .ant-modal-body {
