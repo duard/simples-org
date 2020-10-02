@@ -23,8 +23,7 @@
             "aot": true,
             "assets": ["apps/front/src/favicon.ico", "apps/front/src/assets"],
             "styles": ["apps/front/src/styles.scss"],
-            "scripts": [],
-            "extraWebpackConfig": "./webpack.config.js"
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -61,8 +60,7 @@
           "builder": "ngx-build-plus:dev-server",
           "options": {
             "browserTarget": "front:build",
-            "proxyConfig": "apps/front/proxy.conf.json",
-            "extraWebpackConfig": "./webpack.config.js"
+            "proxyConfig": "apps/front/proxy.conf.json"
           },
           "configurations": {
             "production": {

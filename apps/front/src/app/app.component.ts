@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, ChangeDetectorRef, Component, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from '@env/environment';
-import { Message } from '@simples-org/api-interfaces';
 
 @Component({
   selector: 'simples-org-root',
@@ -11,7 +10,7 @@ import { Message } from '@simples-org/api-interfaces';
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent implements AfterViewInit {
-  hello$ = this.http.get<Message>('/api/hello');
+  hello$ = this.http.get<any>('/api/hello');
   constructor(
     private http: HttpClient,
     public router: Router,
