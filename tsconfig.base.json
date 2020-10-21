@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "types": ["node", "jest"],
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
@@ -24,5 +25,6 @@
       "@simples-org/lib-api-shared": ["libs/lib-api-shared/src/index.ts"]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": ["node_modules", "tmp"],
+  "include": ["**/*.ts"]
 }
