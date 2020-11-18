@@ -15,7 +15,6 @@ import { CoreResolver } from './core.resolver';
       load: [configuration],
       validationSchema,
     }),
-
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       useClass: DatabaseConfig,

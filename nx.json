@@ -49,6 +49,9 @@
     },
     "lib-api-shared": {
       "tags": []
+    },
+    "lib-app-zest": {
+      "tags": []
     }
   }
 }

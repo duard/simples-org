@@ -13,7 +13,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const config = app.get(ConfigService);
 
-  const globalPrefix = 'api';
+  const globalPrefix = 'api-simples';
   app.setGlobalPrefix(globalPrefix);
   const port = environment.API_PORT || 3333;
   await app.listen(port, () => {

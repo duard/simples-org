@@ -315,6 +315,35 @@
           }
         }
       }
+    },
+    "lib-app-zest": {
+      "projectType": "library",
+      "root": "libs/lib-app-zest",
+      "sourceRoot": "libs/lib-app-zest/src",
+      "prefix": "simples-org",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["libs/lib-app-zest/tsconfig.lib.json", "libs/lib-app-zest/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**", "!libs/lib-app-zest/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/lib-app-zest/jest.config.js",
+            "tsConfig": "libs/lib-app-zest/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/lib-app-zest/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

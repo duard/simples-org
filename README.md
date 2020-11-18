@@ -11,10 +11,10 @@ npx ng update --all --force;
 npm audit fix; npm audit fix --force;
 ```
 
-rodar a API e o APP paralelamente :-D  ```npm run dev```
+rodar a API e o APP paralelamente :-D `npm run dev`
 
 ```shell
-npx nx run-many --target=serve --projects=front,api --parallel=true 
+npx nx run-many --target=serve --projects=front,api --parallel=true
 npx nx run-many --target=serve --configuration=development --projects=front,api --parallel=true --maxParallel=100
 npx nx run-many --target=serve --configuration=qa --projects=front,api --parallel=true --maxParallel=100
 npx nx run-many --target=serve --configuration=production --projects=front,api --parallel=true --maxParallel=100
@@ -30,6 +30,7 @@ Criar uma nova Library NestJS
 
 ```shell
 nx generate @nrwl/nest:library lib-nome-a-ser-creiada
+nx generate @nrwl/angular:library lib-app-zest
 ```
 
 ##### installs angular
@@ -45,13 +46,14 @@ npm audit fix; npm audit fix --force;
 
 ```
 npm i --save typeorm @nestjs/config @nestjs/typeorm @nestjs/common dotenv-flow mysql
-npm i --save-dev   
+npm i --save-dev
 
 npm audit fix; npm audit fix --force;
 
 ```
 
 ## configure o cypress para rodar no WSL2 :-)
+
 https://nickymeuleman.netlify.app/blog/gui-on-wsl2-cypress
 
 ```
@@ -59,13 +61,13 @@ npm uninstall cypress --save-dev; npm install cypress --save-dev;
 ```
 
 ## configurar o cache
-Connect the workspace to your Nx Cloud account at https://nx.app/orgs/workspace-setup?accessToken=ZjFjYzI4OWMtNzY1Ny00MjYyLWI3YmItMmRkMjhkZmNlZDdkfHJlYWQtd3JpdGU=.
-This will allow you to configure the cache and see detailed stats. You can do it later.
 
-#### coisas boas 
+Connect the workspace to your Nx Cloud account at https://nx.app/orgs/workspace-setup?accessToken=ZjFjYzI4OWMtNzY1Ny00MjYyLWI3YmItMmRkMjhkZmNlZDdkfHJlYWQtd3JpdGU=. This will allow you to configure the cache and see detailed stats. You can do it later.
+
+#### coisas boas
 
 Diversos links bacanas
 
-
 ##### links nestjs
+
 https://awesomeopensource.com/project/juliandavidmr/awesome-nestjs
