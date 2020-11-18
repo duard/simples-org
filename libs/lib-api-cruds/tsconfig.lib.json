@@ -9,5 +9,6 @@
     "target": "es6"
   },
   "exclude": ["**/*.spec.ts"],
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts", "./libs/*/src/**/*", "./apps/*/src/**/*"]
+
 }

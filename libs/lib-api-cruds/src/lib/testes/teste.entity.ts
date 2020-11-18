@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-import { BaseMysqlEntity } from "@simples-org/lib-api-shared";
+import { BaseMysqlEntity } from '@simples-org/lib-api-shared';
 
 @Entity('testes')
 export class TesteEntity extends BaseMysqlEntity {
